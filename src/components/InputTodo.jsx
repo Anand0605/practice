@@ -2,12 +2,15 @@ import React from 'react'
 import { useState } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 
-const InputTodo = ({ todoList, setTodoList, }) => {
+const InputTodo = ({ todoList, setTodoList }) => {
     const [inputBox, setInputBox] = useState('')
 
     //    console.log('inputBox', inputBox)
 
     const addItem = () => {
+        if(!inputBox){
+            return alert("please add item")
+        }
         const newTodoItem = {
             id: uuidv4(),
             item: inputBox,

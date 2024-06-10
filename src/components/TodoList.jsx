@@ -10,7 +10,7 @@ const TodoList = ({ todoList, handleToggle,handleDelete }) => {
                 <ul className='ul-list'>
                     {
                         todoList.map((listItem) => (
-                            <li className='li-list' key={listItem.id} >
+                            <li className='li-list' key={listItem.id} style={{backgroundColor:listItem.done ? "red" : ""}}>
                                 <h3>{listItem.item}</h3>
                                 <span className='action'>
                                     {
